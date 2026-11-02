@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tasmiya Siddiqui — TasmiyaOS · AI/ML student &amp; founder of Vaslix</title>
+<meta name="description" content="Tasmiya Siddiqui’s portfolio is a tiny computer: open apps for About, Skills and Projects, walk a pixel city, and chat with her AI twin — a small ML model that trains in your browser.">
+<meta name="theme-color" content="#FFF9E9">
+<meta property="og:title" content="TasmiyaOS — Tasmiya Siddiqui’s portfolio is a tiny computer">
+<meta property="og:description" content="BTech AI/ML student · founder of Vaslix · creator of TEKNOA. Open the apps, walk the pixel city, talk to my AI twin.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="og.png">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/dm-mono-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="os.css">
+<script src="boot.js"></script>
+</head>
+<body class="os">
+<a class="skip" href="classic.html">Skip to the classic (plain, scrollable) view</a>
+
+<!-- Boot screen: once per visit; click / any key / ?noboot skips it -->
+<div class="boot" id="boot" aria-hidden="true">
+  <div class="boot__in">
+    <svg class="bot bot--boot" viewBox="0 0 16 19" shape-rendering="crispEdges" aria-hidden="true"><rect class="blip" x="7" y="0" width="2" height="2" fill="#F4CE6F"/><rect x="7.5" y="2" width="1" height="2" fill="#172631"/><rect x="2" y="4" width="12" height="9" fill="#172631"/><rect x="3" y="5" width="10" height="7" fill="#8ED6BE"/><g class="eyes"><rect x="5" y="7" width="2" height="2" fill="#172631"/><rect x="9" y="7" width="2" height="2" fill="#172631"/></g><rect x="6" y="10" width="4" height="1" fill="#172631"/><rect x="1" y="7" width="1" height="3" fill="#172631"/><rect x="14" y="7" width="1" height="3" fill="#172631"/><rect x="4" y="13" width="8" height="5" fill="#172631"/><rect x="5" y="14" width="6" height="3" fill="#2C9AA6"/><rect x="7" y="15" width="2" height="1" fill="#F4CE6F"/><rect x="2" y="14" width="2" height="3" fill="#172631"/><rect x="12" y="14" width="2" height="3" fill="#172631"/></svg>
+    <p class="boot__logo">Tasmiya<b>OS</b></p>
+    <p class="boot__t" id="boot-t">TasmiyaOS booting…</p>
+    <div class="boot__bar"><i id="boot-bar"></i></div>
+    <ul class="boot__log" id="boot-log"><li>mounting projects/ <span>10 items</span></li><li>training ai twin <span id="boot-n">200+ examples</span></li><li>building pixel city <span>10 stops</span></li></ul>
+    <p class="boot__skip">click or press any key to skip</p>
+  </div>
+</div>
+
+<header class="menubar">
+  <div class="menubar__l">
+    <div class="menu">
+      <button class="menubar__logo" type="button" id="os-menu-btn" aria-haspopup="true" aria-expanded="false" aria-controls="os-menu"><span class="logo-mark" aria-hidden="true">T</span><span class="menubar__os">TasmiyaOS</span></button>
+      <ul class="menu__list" id="os-menu" role="menu" hidden>
+        <li role="none"><button role="menuitem" type="button" data-open="about">About Tasmiya</button></li>
+        <li role="none"><button role="menuitem" type="button" data-open="terminal">Open Terminal</button></li>
+        <li role="none"><button role="menuitem" type="button" id="close-all">Close all windows</button></li>
+        <li role="none"><button role="menuitem" type="button" id="reboot">Restart…</button></li>
+        <li role="none"><a role="menuitem" href="classic.html">Classic view (plain page)</a></li>
+      </ul>
+    </div>
+    <b class="menubar__app" id="active-app" aria-live="polite">Desktop</b>
+    <nav class="menubar__nav" aria-label="Main sections">
+      <button type="button" data-open="about">About</button>
+      <button type="button" data-open="skills">Skills</button>
+      <button type="button" data-open="projects">Projects</button>
+      <button type="button" data-open="contact">Contact</button>
+    </nav>
+  </div>
+  <div class="menubar__r">
+    <a class="menubar__classic" href="classic.html">Classic view</a>
+    <button class="menubar__twin" type="button" data-open="twin"><span class="live" aria-hidden="true"></span> AI twin</button>
+    <span class="clock" id="clock" title="Tasmiya’s local time (India)"><span id="clock-d"></span> <span id="clock-t">--:--</span> <small>IST</small></span>
+  </div>
+</header>
+
+<main class="desktop" id="desktop">
+  <div class="wall" aria-hidden="true"><img class="cloud cloud--1" src="assets/pixel-cloud.svg" alt=""><img class="cloud cloud--2" src="assets/pixel-cloud.svg" alt=""><img class="cloud cloud--3" src="assets/pixel-cloud.svg" alt=""></div>
+
+  <section class="hello" aria-labelledby="hello-name">
+    <p class="hello__k">Hello 👋 I’m</p>
+    <h1 id="hello-name">Tasmiya Siddiqui</h1>
+    <p class="hello__l">BTech AI/ML student · founder of <b>Vaslix</b> · creator of <b>TEKNOA</b></p>
+    <p class="hello__tip"><span class="kbd">double-click</span> an app to open it <span class="hello__or">· or tap</span></p>
+  </section>
+
+  <nav class="icons-wrap" aria-label="Apps">
+    <ul class="icons" id="icons">
+      <li><button class="icon" type="button" data-open="about" style="--c:var(--coral)" aria-label="Open About"><span class="icon__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></span><span class="icon__label">About</span></button></li>
+      <li><button class="icon" type="button" data-open="skills" style="--c:var(--gold)" aria-label="Open Skills"><span class="icon__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span><span class="icon__label">Skills</span></button></li>
+      <li><button class="icon" type="button" data-open="projects" style="--c:var(--sky)" aria-label="Open Projects"><span class="icon__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 6a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M3 10h18"/></svg></span><span class="icon__label">Projects</span></button></li>
+      <li><button class="icon" type="button" data-open="github" style="--c:var(--lilac)" aria-label="Open GitHub"><span class="icon__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8 8-5 4 5 4M16 8l5 4-5 4M14 5l-4 14"/></svg></span><span class="icon__label">GitHub</span></button></li>
+      <li><button class="icon" type="button" data-open="aws" style="--c:var(--mint)" aria-label="Open On AWS"><span class="icon__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 18h10a4 4 0 0 0 .6-8A6 6 0 0 0 6.2 9.3 4.4 4.4 0 0 0 7 18z"/><path d="m10 14 2-2 2 2M12 12v5"/></svg></span><span class="icon__label">On AWS</span></button></li>
+      <li><button class="icon" type="button" data-open="teknoa" style="--c:var(--orange)" aria-label="Open TEKNOA"><span class="icon__tile" aria-hidden="true"><img src="assets/teknoa-logo.webp" alt="" width="40" height="40"></span><span class="icon__label">TEKNOA</span></button></li>
+      <li><button class="icon" type="button" data-open="city" style="--c:var(--lime)" aria-label="Open City"><span class="icon__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10h5v11M10 21V4h7v17M17 21v-8h3v8"/><path d="M13 8h1M13 12h1M13 16h1M7 14h1"/></svg></span><span class="icon__label">City</span></button></li>
+      <li><button class="icon" type="button" data-open="twin" style="--c:var(--teal)" aria-label="Open AI Twin"><span class="icon__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="12" rx="2"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg></span><span class="icon__label">AI Twin</span></button></li>
+      <li><button class="icon" type="button" data-open="contact" style="--c:var(--peach)" aria-label="Open Contact"><span class="icon__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span class="icon__label">Contact</span></button></li>
+      <li><button class="icon" type="button" data-open="terminal" style="--c:var(--ink)" aria-label="Open Terminal"><span class="icon__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 10 3 2-3 2M12 15h5"/></svg></span><span class="icon__label">Terminal</span></button></li>
+    </ul>
+  </nav>
+
+  <button class="psst" type="button" data-open="twin" aria-label="psst — talk to my AI twin">
+    <span class="psst__bubble"><span class="psst__glow" aria-hidden="true"></span><span class="psst__txt">psst — talk to my AI twin</span> <span aria-hidden="true">⌨️</span></span>
+    <svg class="bot" viewBox="0 0 16 19" shape-rendering="crispEdges" aria-hidden="true"><rect class="blip" x="7" y="0" width="2" height="2" fill="#F4CE6F"/><rect x="7.5" y="2" width="1" height="2" fill="#172631"/><rect x="2" y="4" width="12" height="9" fill="#172631"/><rect x="3" y="5" width="10" height="7" fill="#8ED6BE"/><g class="eyes"><rect x="5" y="7" width="2" height="2" fill="#172631"/><rect x="9" y="7" width="2" height="2" fill="#172631"/></g><rect x="6" y="10" width="4" height="1" fill="#172631"/><rect x="1" y="7" width="1" height="3" fill="#172631"/><rect x="14" y="7" width="1" height="3" fill="#172631"/><rect x="4" y="13" width="8" height="5" fill="#172631"/><rect x="5" y="14" width="6" height="3" fill="#2C9AA6"/><rect x="7" y="15" width="2" height="1" fill="#F4CE6F"/><rect x="2" y="14" width="2" height="3" fill="#172631"/><rect x="12" y="14" width="2" height="3" fill="#172631"/></svg>
+  </button>
+
+  <p class="home-classic"><a href="classic.html">Prefer a normal page? Classic view →</a></p>
+
+  <div class="windows" id="windows">
+
+  <section class="win win--about" id="win-about" data-win="about" role="dialog" aria-modal="false" aria-labelledby="win-about-t" hidden>
+    <header class="win__bar">
+      <span class="lights"><button class="l l--close" type="button" data-act="close" aria-label="Close About"></button><button class="l l--min" type="button" data-act="min" aria-label="Minimise About"></button><button class="l l--max" type="button" data-act="max" aria-label="Zoom About"></button></span>
+      <button class="win__back" type="button" data-act="close" aria-label="Back to home">‹ Home</button>
+      <h2 class="win__t" id="win-about-t"><span class="win__file">about.md</span><span class="win__name">About</span></h2>
+      <button class="win__x" type="button" data-act="close" aria-label="Close About">✕</button>
+    </header>
+    <div class="win__body">
+      <div class="about">
+        <div class="about__id">
+          <span class="avatar" aria-hidden="true">T<i></i></span>
+          <div><p class="kicker">About me</p><h3 class="about__name">Hi, I’m Tasmiya Siddiqui.</h3><p class="about__line">Student by day. <mark>Founder</mark> by night.</p></div>
+        </div>
+        <p class="lead">I learn how AI works in class — and ship it as real products outside it.</p>
+        <ul class="facts" aria-label="Quick facts">
+          <li style="--c:var(--sky)"><span>🎓</span><b>BTech AI/ML</b><small>3rd year · Maharana Institute of Professional Studies</small></li>
+          <li style="--c:var(--coral)"><span>🚀</span><b>Founder</b><small>Vaslix · AI agency</small></li>
+          <li style="--c:var(--gold)"><span>🎬</span><b>Creator</b><small>TEKNOA · AI news</small></li>
+          <li style="--c:var(--mint)"><span>🇮🇳</span><b>India</b><small>English · Hindi</small></li>
+        </ul>
+        <div class="row"><button class="btn btn--dark" type="button" data-open="projects">See my projects</button><button class="btn btn--light" type="button" data-open="twin">&gt;_ Talk to my AI twin</button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="win win--skills" id="win-skills" data-win="skills" role="dialog" aria-modal="false" aria-labelledby="win-skills-t" hidden>
+    <header class="win__bar">
+      <span class="lights"><button class="l l--close" type="button" data-act="close" aria-label="Close Skills"></button><button class="l l--min" type="button" data-act="min" aria-label="Minimise Skills"></button><button class="l l--max" type="button" data-act="max" aria-label="Zoom Skills"></button></span>
+      <button class="win__back" type="button" data-act="close" aria-label="Back to home">‹ Home</button>
+      <h2 class="win__t" id="win-skills-t"><span class="win__file">skills.ts</span><span class="win__name">Skills</span></h2>
+      <button class="win__x" type="button" data-act="close" aria-label="Close Skills">✕</button>
+    </header>
+    <div class="win__body">
+      <p class="kicker">Skills / tech superpowers</p><h3 class="wh">Six superpowers.</h3>
+      <ul class="skills"><li style="--c:var(--coral)"><span class="skills__e" aria-hidden="true">🧠</span><div><h4>Machine learning</h4><ul class="chips"><li>Python</li><li>pandas</li><li>scikit-learn</li></ul></div></li><li style="--c:var(--gold)"><span class="skills__e" aria-hidden="true">🤖</span><div><h4>AI chat &amp; voice agents</h4><ul class="chips"><li>LLM agents</li><li>WhatsApp</li><li>LiveKit</li></ul></div></li><li style="--c:var(--sky)"><span class="skills__e" aria-hidden="true">💻</span><div><h4>Full-stack products</h4><ul class="chips"><li>Next.js</li><li>TypeScript</li><li>Laravel</li></ul></div></li><li style="--c:var(--lilac)"><span class="skills__e" aria-hidden="true">⚙️</span><div><h4>Automation &amp; growth</h4><ul class="chips"><li>Node.js</li><li>Playwright</li><li>DM funnels</li></ul></div></li><li style="--c:var(--mint)"><span class="skills__e" aria-hidden="true">🎙️</span><div><h4>AI content &amp; voice cloning</h4><ul class="chips"><li>Voice clone</li><li>Scripts</li><li>Motion reels</li></ul></div></li><li style="--c:var(--lime)"><span class="skills__e" aria-hidden="true">☁️</span><div><h4>Cloud on AWS</h4><ul class="chips"><li>Amplify</li><li>CI/CD</li><li>CloudFront</li></ul></div></li></ul>
+    </div>
+  </section>
+
+  <section class="win win--projects" id="win-projects" data-win="projects" role="dialog" aria-modal="false" aria-labelledby="win-projects-t" hidden>
+    <header class="win__bar">
+      <span class="lights"><button class="l l--close" type="button" data-act="close" aria-label="Close Projects"></button><button class="l l--min" type="button" data-act="min" aria-label="Minimise Projects"></button><button class="l l--max" type="button" data-act="max" aria-label="Zoom Projects"></button></span>
+      <button class="win__back" type="button" data-act="close" aria-label="Back to home">‹ Home</button>
+      <h2 class="win__t" id="win-projects-t"><span class="win__file">projects/</span><span class="win__name">Projects</span></h2>
+      <button class="win__x" type="button" data-act="close" aria-label="Close Projects">✕</button>
+    </header>
+    <div class="win__body">
+      <div class="finder">
+        <nav class="finder__side" aria-label="Filter projects">
+          <p class="finder__h">Favourites</p>
+          <button class="finder__cat is-on" type="button" data-cat="all" aria-pressed="true">All<small>10</small></button><button class="finder__cat" type="button" data-cat="ai" aria-pressed="false">AI & SaaS<small>3</small></button><button class="finder__cat" type="button" data-cat="shop" aria-pressed="false">E-commerce<small>3</small></button><button class="finder__cat" type="button" data-cat="auto" aria-pressed="false">Automation & leads<small>4</small></button>
+          <p class="finder__h">Achievements</p>
+          <ul class="ach">
+            <li><b>9+</b><small>live products</small></li><li><b>7</b><small>industries</small></li><li><b>24/7</b><small>AI agents</small></li><li><b>1st</b><small>agency, in college</small></li>
+          </ul>
+        </nav>
+        <div class="finder__main">
+          <p class="kicker">Projects &amp; achievements</p>
+          <h3 class="wh">Shipped at Vaslix &amp; beyond.</h3>
+          <ul class="files" id="files">
+            <li data-cat="ai"><button class="file" type="button" data-project="launchos" style="--c:var(--coral)"><span class="file__shot"><img src="assets/work/launchos.webp" width="1200" height="750" loading="lazy" alt="launchOS website screenshot"></span><span class="file__t">launchOS</span><span class="file__d">One line in, a full startup launch plan out.</span></button></li>
+            <li data-cat="ai"><button class="file" type="button" data-project="softwarehub" style="--c:var(--gold)"><span class="file__shot"><img src="assets/work/softwarehub.webp" width="1200" height="750" loading="lazy" alt="Software Hub website screenshot"></span><span class="file__t">Software Hub</span><span class="file__d">Marketplace for software keys, with escrow.</span></button></li>
+            <li data-cat="shop"><button class="file" type="button" data-project="aandre" style="--c:var(--lilac)"><span class="file__shot"><img src="assets/work/aandre.webp" width="1200" height="750" loading="lazy" alt="Aandré Amelie website screenshot"></span><span class="file__t">Aandré Amelie</span><span class="file__d">Custom D2C fashion storefront.</span></button></li>
+            <li data-cat="shop"><button class="file" type="button" data-project="kusho" style="--c:var(--mint)"><span class="file__shot"><img src="assets/work/kusho.webp" width="1200" height="750" loading="lazy" alt="Kusho website screenshot"></span><span class="file__t">Kusho</span><span class="file__d">Premium Shopify storefront.</span></button></li>
+            <li data-cat="auto"><button class="file" type="button" data-project="aarc" style="--c:var(--sky)"><span class="file__shot"><img src="assets/work/aarc.webp" width="1200" height="750" loading="lazy" alt="AARC Bookkeeping website screenshot"></span><span class="file__t">AARC Bookkeeping</span><span class="file__d">Lead-generation site for a finance firm.</span></button></li>
+            <li data-cat="auto"><button class="file" type="button" data-project="aether" style="--c:var(--lime)"><span class="file__shot"><img src="assets/work/aether.webp" width="1200" height="750" loading="lazy" alt="Aether Dental website screenshot"></span><span class="file__t">Aether Dental</span><span class="file__d">Clinic site with an AI bot that books visits.</span></button></li>
+            <li data-cat="auto"><button class="file" type="button" data-project="inquiryboost" style="--c:var(--peach)"><span class="file__shot"><img src="assets/work/inquiryboost.webp" width="1200" height="750" loading="lazy" alt="InquiryBoost website screenshot"></span><span class="file__t">InquiryBoost</span><span class="file__d">WhatsApp admission automation for schools.</span></button></li>
+            <li data-cat="shop"><button class="file" type="button" data-project="laptophouse" style="--c:var(--gold)"><span class="file__shot"><img src="assets/work/laptophouse.webp" width="1200" height="750" loading="lazy" alt="Laptop House website screenshot"></span><span class="file__t">Laptop House</span><span class="file__d">Bilingual English/Hindi store for a laptop shop.</span></button></li>
+            <li data-cat="ai"><button class="file" type="button" data-project="pagani" style="--c:var(--coral)"><span class="file__shot"><img src="assets/work/pagani.webp" width="1200" height="750" loading="lazy" alt="Pagani Experience website screenshot"></span><span class="file__t">Pagani Experience</span><span class="file__d">Cinematic 3D scroll story.</span></button></li>
+            <li data-cat="auto"><button class="file" type="button" data-project="gharleads" style="--c:var(--sky)"><span class="file__shot"><img src="assets/work/gharleads.webp" width="1200" height="750" loading="lazy" alt="GharLeads website screenshot"></span><span class="file__t">GharLeads</span><span class="file__d">Lead tool for brokers — product + Hindi tutorials.</span></button></li>
+          </ul>
+          <p class="finder__tip">Click a project to preview it · all sites are live</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="win win--preview" id="win-preview" data-win="preview" role="dialog" aria-modal="false" aria-labelledby="win-preview-t" hidden>
+    <header class="win__bar">
+      <span class="lights"><button class="l l--close" type="button" data-act="close" aria-label="Close preview"></button><button class="l l--min" type="button" data-act="min" aria-label="Minimise preview"></button><button class="l l--max" type="button" data-act="max" aria-label="Zoom preview"></button></span>
+      <button class="win__back" type="button" data-act="close" aria-label="Back to home">‹ Home</button>
+      <h2 class="win__t" id="win-preview-t"><span class="win__file">Quick Look</span><span class="win__name">Preview</span></h2>
+      <button class="win__x" type="button" data-act="close" aria-label="Close preview">✕</button>
+    </header>
+    <div class="win__body">
+      <div class="pv" id="pv">
+        <div class="pv__shot"><span class="pv__bar" aria-hidden="true"><i></i><i></i><i></i><span id="pv-url">vaslix.com</span></span><img id="pv-img" src="assets/work/launchos.webp" width="1200" height="750" alt=""></div>
+        <div class="pv__info">
+          <div><h3 id="pv-t">launchOS</h3><p id="pv-d">One line in, a full startup launch plan out.</p><ul class="chips" id="pv-tags"></ul></div>
+          <div class="row"><button class="btn btn--light btn--sq" type="button" id="pv-prev" aria-label="Previous project">←</button><a class="btn btn--dark" id="pv-go" href="https://www.launchos.co.in/" target="_blank" rel="noopener">Visit <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><button class="btn btn--light btn--sq" type="button" id="pv-next" aria-label="Next project">→</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="win win--github" id="win-github" data-win="github" role="dialog" aria-modal="false" aria-labelledby="win-github-t" hidden>
+    <header class="win__bar">
+      <span class="lights"><button class="l l--close" type="button" data-act="close" aria-label="Close GitHub"></button><button class="l l--min" type="button" data-act="min" aria-label="Minimise GitHub"></button><button class="l l--max" type="button" data-act="max" aria-label="Zoom GitHub"></button></span>
+      <button class="win__back" type="button" data-act="close" aria-label="Back to home">‹ Home</button>
+      <h2 class="win__t" id="win-github-t"><span class="win__file">github.sh</span><span class="win__name">GitHub</span></h2>
+      <button class="win__x" type="button" data-act="close" aria-label="Close GitHub">✕</button>
+    </header>
+    <div class="win__body">
+      <p class="kicker">From my GitHub</p><h3 class="wh"><span class="mono">34</span> public repos.</h3>
+      <div class="langs" aria-label="Languages across 34 public repositories: mostly TypeScript, then HTML, JavaScript, PHP and Python"><div class="langs__bar" aria-hidden="true"><i style="width:41.2%;background:#3178C6"></i><i style="width:17.6%;background:#E34C26"></i><i style="width:11.8%;background:#F1E05A"></i><i style="width:8.8%;background:#4F5D95"></i><i style="width:8.8%;background:#3572A5"></i><i style="width:11.8%;background:#B8B4C8"></i></div><p class="langs__k"><span><i style="background:#3178C6"></i>TypeScript</span><span><i style="background:#E34C26"></i>HTML</span><span><i style="background:#F1E05A"></i>JavaScript</span><span><i style="background:#4F5D95"></i>PHP</span><span><i style="background:#3572A5"></i>Python</span></p></div>
+      <ul class="repos"><li><a class="repo" href="https://github.com/tamia02/VOICEBOT" target="_blank" rel="noopener"><b>VOICEBOT</b><span>AI phone agent</span><small><i style="background:#3572A5"></i>Python</small></a></li><li><a class="repo" href="https://github.com/tamia02/autoposter" target="_blank" rel="noopener"><b>autoposter</b><span>AI content pipeline</span><small><i style="background:#3572A5"></i>Python</small></a></li><li><a class="repo" href="https://github.com/tamia02/whatsappautomation" target="_blank" rel="noopener"><b>whatsappautomation</b><span>WhatsApp growth agent</span><small><i style="background:#3178C6"></i>TypeScript</small></a></li><li><a class="repo" href="https://github.com/tamia02/tan90erp" target="_blank" rel="noopener"><b>tan90erp</b><span>ERP on Laravel</span><small><i style="background:#4F5D95"></i>PHP</small></a></li></ul>
+      <div class="row"><a class="btn btn--dark" href="https://github.com/tamia02" target="_blank" rel="noopener" >github.com/tamia02 <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+    </div>
+  </section>
+
+  <section class="win win--aws" id="win-aws" data-win="aws" role="dialog" aria-modal="false" aria-labelledby="win-aws-t" hidden>
+    <header class="win__bar">
+      <span class="lights"><button class="l l--close" type="button" data-act="close" aria-label="Close On AWS"></button><button class="l l--min" type="button" data-act="min" aria-label="Minimise On AWS"></button><button class="l l--max" type="button" data-act="max" aria-label="Zoom On AWS"></button></span>
+      <button class="win__back" type="button" data-act="close" aria-label="Back to home">‹ Home</button>
+      <h2 class="win__t" id="win-aws-t"><span class="win__file">amplify.yml</span><span class="win__name">On AWS</span></h2>
+      <button class="win__x" type="button" data-act="close" aria-label="Close On AWS">✕</button>
+    </header>
+    <div class="win__body">
+      <p class="kicker">How this site runs</p><h3 class="wh">Live on AWS.</h3>
+      <p class="lead">Push to GitHub → live worldwide. No servers, no keys.</p>
+      <ol class="flow" aria-label="Deployment flow">
+        <li style="--c:var(--lilac)"><span>🐙</span><b>GitHub</b><small>code</small></li>
+        <li style="--c:var(--gold)"><span>⚙️</span><b>Amplify</b><small>build + test</small></li>
+        <li style="--c:var(--sky)"><span>🌍</span><b>CloudFront</b><small>HTTPS · CDN</small></li>
+        <li style="--c:var(--lime)"><span>💻</span><b>Your browser</b><small>AI twin runs here</small></li>
+      </ol>
+      <p class="note mono">amplify.yml runs the tests on every deploy ✓</p>
+    </div>
+  </section>
+
+  <section class="win win--teknoa" id="win-teknoa" data-win="teknoa" role="dialog" aria-modal="false" aria-labelledby="win-teknoa-t" hidden>
+    <header class="win__bar">
+      <span class="lights"><button class="l l--close" type="button" data-act="close" aria-label="Close TEKNOA"></button><button class="l l--min" type="button" data-act="min" aria-label="Minimise TEKNOA"></button><button class="l l--max" type="button" data-act="max" aria-label="Zoom TEKNOA"></button></span>
+      <button class="win__back" type="button" data-act="close" aria-label="Back to home">‹ Home</button>
+      <h2 class="win__t" id="win-teknoa-t"><span class="win__file">teknoa.mp4</span><span class="win__name">TEKNOA</span></h2>
+      <button class="win__x" type="button" data-act="close" aria-label="Close TEKNOA">✕</button>
+    </header>
+    <div class="win__body">
+      <div class="tk">
+        <img class="tk__logo" src="assets/teknoa-logo.webp" width="96" height="96" alt="TEKNOA logo">
+        <div><p class="kicker">My AI-news brand</p><h3 class="wh">TEKNOA <small class="mono">@tek_noa</small></h3><p class="lead">Daily AI-tool reels, voiced by my AI voice clone.</p></div>
+      </div>
+      <ol class="flow flow--tk" aria-label="How a TEKNOA reel is made">
+        <li style="--c:var(--sky)"><span>🔎</span><b>Research</b></li>
+        <li style="--c:var(--lilac)"><span>🎙️</span><b>Voice clone</b></li>
+        <li style="--c:var(--gold)"><span>🎬</span><b>Reel</b></li>
+        <li style="--c:var(--mint)"><span>💬</span><b>DM funnel</b></li>
+      </ol>
+      <div class="row"><a class="btn btn--dark" href="https://www.instagram.com/tek_noa/" target="_blank" rel="noopener" >Instagram <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><a class="btn btn--light" href="https://www.youtube.com/@tek_noa" target="_blank" rel="noopener" >YouTube <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+    </div>
+  </section>
+
+  <section class="win win--city" id="win-city" data-win="city" role="dialog" aria-modal="false" aria-labelledby="win-city-t" hidden>
+    <header class="win__bar">
+      <span class="lights"><button class="l l--close" type="button" data-act="close" aria-label="Close City"></button><button class="l l--min" type="button" data-act="min" aria-label="Minimise City"></button><button class="l l--max" type="button" data-act="max" aria-label="Zoom City"></button></span>
+      <button class="win__back" type="button" data-act="close" aria-label="Back to home">‹ Home</button>
+      <h2 class="win__t" id="win-city-t"><span class="win__file">city.exe</span><span class="win__name">City</span></h2>
+      <button class="win__x" type="button" data-act="close" aria-label="Close City">✕</button>
+    </header>
+    <div class="win__body">
+      <div class="city" id="city">
+        <canvas class="city__cv" id="city-cv" tabindex="0" aria-label="Pixel city mini-game. Use the left and right arrow keys to walk the robot, Enter to open a building."></canvas>
+        <div class="city__hud"><span class="city__count" id="city-count">🏙 0/10 visited</span><span class="city__help">← → walk · ↑ enter · or tap</span></div>
+        <div class="city__card" id="city-card" aria-live="polite" hidden><span class="city__e" id="city-e">🏠</span><div><b id="city-t">Tasmiya’s House</b><small id="city-d"></small></div><button class="btn btn--dark btn--sm" type="button" id="city-go">Open</button></div>
+        <div class="city__pad" aria-hidden="false">
+          <button class="pad" type="button" id="city-l" aria-label="Walk left">◀</button>
+          <button class="pad pad--up" type="button" id="city-u" aria-label="Enter building">▲</button>
+          <button class="pad" type="button" id="city-r" aria-label="Walk right">▶</button>
+        </div>
+      </div>
+      <div class="city__list" id="city-list" aria-label="Walk to a building"></div>
+    </div>
+  </section>
+
+  <section class="win win--twin" id="win-twin" data-win="twin" role="dialog" aria-modal="false" aria-labelledby="win-twin-t" hidden>
+    <header class="win__bar">
+      <span class="lights"><button class="l l--close" type="button" data-act="close" aria-label="Close AI Twin"></button><button class="l l--min" type="button" data-act="min" aria-label="Minimise AI Twin"></button><button class="l l--max" type="button" data-act="max" aria-label="Zoom AI Twin"></button></span>
+      <button class="win__back" type="button" data-act="close" aria-label="Back to home">‹ Home</button>
+      <h2 class="win__t" id="win-twin-t"><span class="win__file">twin.exe</span><span class="win__name">AI Twin</span></h2>
+      <button class="win__x" type="button" data-act="close" aria-label="Close AI Twin">✕</button>
+    </header>
+    <div class="win__body">
+      <div class="chat">
+        <div class="chat__head">
+          <span class="avatar avatar--sm" aria-hidden="true">T<i></i></span>
+          <div><b>tasmiya.ai</b> <small>· my AI twin</small><p class="chat__st"><span class="live" aria-hidden="true"></span><span id="model-status">training in your browser…</span></p></div>
+          <button class="icon-btn" type="button" id="voice-btn" aria-label="Play my AI voice clone saying hi" title="Hear my AI voice clone">🔊</button>
+          <button class="icon-btn" type="button" id="reel-btn" aria-label="Reel mode: turn my last answer into a reel" title="Reel mode">🎬</button>
+        </div>
+        <div class="chat__log" id="log" role="log" aria-live="polite" aria-relevant="additions" tabindex="0" aria-label="Conversation with the AI twin"></div>
+        <div class="chat__chips" id="chips" aria-label="Suggested questions"></div>
+        <form class="chat__form" id="twin-form" autocomplete="off">
+          <label for="twin-input" class="sr-only">Ask my AI twin something</label>
+          <input id="twin-input" name="q" type="text" maxlength="160" placeholder="ask me anything… or type help" enterkeyhint="send" autocapitalize="off" spellcheck="false">
+          <button class="btn btn--dark btn--sm" type="submit">Send</button>
+        </form>
+        <audio id="voice" preload="none" src="assets/ai-twin-hello.mp3"></audio>
+      </div>
+    </div>
+  </section>
+
+  <section class="win win--contact" id="win-contact" data-win="contact" role="dialog" aria-modal="false" aria-labelledby="win-contact-t" hidden>
+    <header class="win__bar">
+      <span class="lights"><button class="l l--close" type="button" data-act="close" aria-label="Close Contact"></button><button class="l l--min" type="button" data-act="min" aria-label="Minimise Contact"></button><button class="l l--max" type="button" data-act="max" aria-label="Zoom Contact"></button></span>
+      <button class="win__back" type="button" data-act="close" aria-label="Back to home">‹ Home</button>
+      <h2 class="win__t" id="win-contact-t"><span class="win__file">contact.sh</span><span class="win__name">Contact</span></h2>
+      <button class="win__x" type="button" data-act="close" aria-label="Close Contact">✕</button>
+    </header>
+    <div class="win__body">
+      <div class="contact">
+        <p class="kicker">Contact</p><h3 class="wh">Have an idea? <mark>Let’s build it.</mark></h3>
+        <div class="contact__links"><a class="btn btn--dark" href="mailto:hello@vaslix.com" >hello@vaslix.com</a><a class="btn btn--light" href="https://github.com/tamia02" target="_blank" rel="noopener" >GitHub <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><a class="btn btn--light" href="https://www.linkedin.com/company/vaslix" target="_blank" rel="noopener" >LinkedIn <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><a class="btn btn--light" href="https://vaslix.com" target="_blank" rel="noopener" >vaslix.com <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+        <p class="note mono">$ reply time: usually same day</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="win win--terminal" id="win-terminal" data-win="terminal" role="dialog" aria-modal="false" aria-labelledby="win-terminal-t" hidden>
+    <header class="win__bar">
+      <span class="lights"><button class="l l--close" type="button" data-act="close" aria-label="Close Terminal"></button><button class="l l--min" type="button" data-act="min" aria-label="Minimise Terminal"></button><button class="l l--max" type="button" data-act="max" aria-label="Zoom Terminal"></button></span>
+      <button class="win__back" type="button" data-act="close" aria-label="Back to home">‹ Home</button>
+      <h2 class="win__t" id="win-terminal-t"><span class="win__file">terminal</span><span class="win__name">Terminal</span></h2>
+      <button class="win__x" type="button" data-act="close" aria-label="Close Terminal">✕</button>
+    </header>
+    <div class="win__body">
+      <div class="term" id="term">
+        <div class="term__log" id="term-log" role="log" aria-live="polite" tabindex="0" aria-label="Terminal output"></div>
+        <form class="term__form" id="term-form" autocomplete="off"><label for="term-input" class="term__ps">visitor@tasmiya:~$</label><input id="term-input" type="text" spellcheck="false" autocapitalize="off" enterkeyhint="go" aria-label="Terminal command"></form>
+      </div>
+    </div>
+  </section>
+  </div>
+</main>
+
+<nav class="dock" aria-label="Dock">
+  <ul class="dock__list"><li><button class="dock__app" type="button" data-dock="about" style="--c:var(--coral)" aria-label="About" title="About"><span class="icon__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></span><i class="dock__dot" aria-hidden="true"></i></button></li><li><button class="dock__app" type="button" data-dock="projects" style="--c:var(--sky)" aria-label="Projects" title="Projects"><span class="icon__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 6a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M3 10h18"/></svg></span><i class="dock__dot" aria-hidden="true"></i></button></li><li><button class="dock__app" type="button" data-dock="skills" style="--c:var(--gold)" aria-label="Skills" title="Skills"><span class="icon__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span><i class="dock__dot" aria-hidden="true"></i></button></li><li><button class="dock__app" type="button" data-dock="city" style="--c:var(--lime)" aria-label="City" title="City"><span class="icon__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10h5v11M10 21V4h7v17M17 21v-8h3v8"/><path d="M13 8h1M13 12h1M13 16h1M7 14h1"/></svg></span><i class="dock__dot" aria-hidden="true"></i></button></li><li><button class="dock__app" type="button" data-dock="twin" style="--c:var(--teal)" aria-label="AI Twin" title="AI Twin"><span class="icon__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="12" rx="2"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg></span><i class="dock__dot" aria-hidden="true"></i></button></li><li><button class="dock__app" type="button" data-dock="terminal" style="--c:var(--ink)" aria-label="Terminal" title="Terminal"><span class="icon__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 10 3 2-3 2M12 15h5"/></svg></span><i class="dock__dot" aria-hidden="true"></i></button></li><li><button class="dock__app" type="button" data-dock="contact" style="--c:var(--peach)" aria-label="Contact" title="Contact"><span class="icon__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><i class="dock__dot" aria-hidden="true"></i></button></li></ul>
+</nav>
+
+<!-- Reel mode overlay -->
+<div class="reel" id="reel" role="dialog" aria-modal="true" aria-labelledby="reel-title" hidden>
+  <div class="reel__frame">
+    <div class="reel__bar" aria-hidden="true"><i id="reel-progress"></i></div>
+    <p class="reel__pill" id="reel-title">AI twin · reel mode</p>
+    <p class="reel__hook" id="reel-hook"></p>
+    <div class="reel__wave" aria-hidden="true"><i style="animation-delay:-0.00s"></i><i style="animation-delay:-0.14s"></i><i style="animation-delay:-0.27s"></i><i style="animation-delay:-0.41s"></i><i style="animation-delay:-0.55s"></i><i style="animation-delay:-0.69s"></i><i style="animation-delay:-0.82s"></i><i style="animation-delay:-0.96s"></i><i style="animation-delay:-0.10s"></i><i style="animation-delay:-0.23s"></i><i style="animation-delay:-0.37s"></i><i style="animation-delay:-0.51s"></i><i style="animation-delay:-0.64s"></i><i style="animation-delay:-0.78s"></i><i style="animation-delay:-0.92s"></i><i style="animation-delay:-0.06s"></i><i style="animation-delay:-0.19s"></i><i style="animation-delay:-0.33s"></i></div>
+    <p class="reel__caption" id="reel-caption" aria-hidden="true"></p>
+    <div class="reel__end">
+      <span class="reel__logo" aria-hidden="true">T</span>
+      <p>That was a reel made by an AI twin.</p>
+      <p class="small">Real ones: <b>@tek_noa</b> on Instagram</p>
+    </div>
+    <p class="sr-only" id="reel-full"></p>
+  </div>
+  <div class="reel__controls">
+    <button class="btn btn--light btn--sm" type="button" id="reel-replay">↺ Replay</button>
+    <button class="btn btn--dark btn--sm" type="button" id="reel-close">Close</button>
+  </div>
+</div>
+
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<noscript><p class="noscript">TasmiyaOS needs JavaScript for its windows. <a href="classic.html">Open the classic view →</a></p></noscript>
+<script src="twin-data.js" defer></script>
+<script src="os-data.js" defer></script>
+<script src="twin-model.js" defer></script>
+<script src="twin-cards.js" defer></script>
+<script src="wm-core.js" defer></script>
+<script src="city-core.js" defer></script>
+<script src="os.js" defer></script>
+<script src="twin.js" defer></script>
+<script src="city.js" defer></script>
+</body>
+</html>

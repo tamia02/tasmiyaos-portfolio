@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en" class="js booted">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tasmiya Siddiqui — classic view · AI/ML student &amp; founder of Vaslix</title>
+<link rel="canonical" href="./">
+<meta name="description" content="Tasmiya Siddiqui — 3rd-year BTech AI/ML student and founder of Vaslix, an AI agency. See 9 live products and talk to her AI twin.">
+<meta name="theme-color" content="#FFF9E9">
+<meta property="og:title" content="Tasmiya Siddiqui — student founder shipping real AI products">
+<meta property="og:description" content="BTech AI/ML student · founder of Vaslix · creator of TEKNOA. Talk to my AI twin — a tiny ML model that trains in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="og.png">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/dm-mono-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/pixel-world.png" as="image">
+<link rel="stylesheet" href="classic.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<p class="classic-bar">Classic view · <a href="index.html?noboot">open the TasmiyaOS desktop →</a></p>
+
+<header class="nav" id="top">
+  <div class="wrap nav__in">
+    <a class="brand" href="#top" aria-label="Tasmiya Siddiqui — back to top"><span class="brand__mark" aria-hidden="true">T</span>tasmiya<span class="brand__dot">_os</span><span class="caret caret--sm" aria-hidden="true"></span></a>
+    <nav aria-label="Main">
+      <ul class="nav__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#superpowers">Skills</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#aws">On AWS</a></li>
+        <li><a href="index.html?noboot" class="os-link">🖥 TasmiyaOS</a></li>
+      </ul>
+    </nav>
+    <span class="clock" id="clock" title="Tasmiya’s local time (India)"><span id="clock-t">--:--</span> IST</span>
+    <button class="btn btn--dark btn--sm" type="button" data-open-twin aria-controls="twin" aria-expanded="false"><span class="dot" aria-hidden="true"></span> AI twin</button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__sky" aria-hidden="true"><img class="cloud cloud--1" src="assets/pixel-cloud.svg" alt=""><img class="cloud cloud--2" src="assets/pixel-cloud.svg" alt=""><img class="cloud cloud--3" src="assets/pixel-cloud.svg" alt=""></div>
+    <canvas class="hero__net" id="net" aria-hidden="true"></canvas>
+    <div class="wrap hero__in">
+      <div class="hero__text win reveal">
+        <div class="win__bar" aria-hidden="true"><span class="lights"><i></i><i></i><i></i></span><span>readme.md</span><span class="win__meta">online</span></div>
+        <div class="win__body">
+          <p class="hello"><span>Hello</span> BTech AI/ML · Founder, Vaslix</p>
+          <h1 id="hero-title" aria-label="I’m Tasmiya Siddiqui. I turn ideas into live AI products.">I’m Tasmiya Siddiqui. I turn ideas into <em class="typed" id="typed" aria-hidden="true">live AI products.</em><span class="caret" aria-hidden="true"></span></h1>
+          <div class="hero__cta">
+            <a class="btn btn--dark" href="#work">See my work <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            <button class="btn btn--light" type="button" data-open-twin aria-controls="twin" aria-expanded="false"><span class="mono" aria-hidden="true">&gt;_</span> Talk to my AI twin</button>
+          </div>
+        </div>
+      </div>
+      <ul class="apps reveal" aria-label="Jump to a section">
+        <li><a class="app" href="#about" style="--c:var(--coral)"><span class="app__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></span><span class="app__label">About</span></a></li>
+        <li><a class="app" href="#superpowers" style="--c:var(--gold)"><span class="app__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span><span class="app__label">Skills</span></a></li>
+        <li><a class="app" href="#work" style="--c:var(--sky)"><span class="app__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V4h6v3M3 12h18"/></svg></span><span class="app__label">Work</span></a></li>
+        <li><a class="app" href="#github" style="--c:var(--lilac)"><span class="app__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8 8-5 4 5 4M16 8l5 4-5 4M14 5l-4 14"/></svg></span><span class="app__label">GitHub</span></a></li>
+        <li><a class="app" href="#aws" style="--c:var(--mint)"><span class="app__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 18h10a4 4 0 0 0 .6-8A6 6 0 0 0 6.2 9.3 4.4 4.4 0 0 0 7 18z"/><path d="m10 14 2-2 2 2M12 12v5"/></svg></span><span class="app__label">On AWS</span></a></li>
+        <li><button class="app app--twin" type="button" data-open-twin aria-controls="twin" aria-expanded="false" style="--c:var(--lime)"><span class="app__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 10 3 2-3 2M12 15h5"/></svg></span><span class="app__label">AI twin</span></button></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="about" class="section" aria-labelledby="about-title">
+    <div class="wrap split">
+      <div class="head">
+        <p class="label"><span class="ftab">about.md</span> 01 — About me</p>
+        <h2 id="about-title" class="reveal">Student by day. <em>Founder</em> by night.</h2>
+        <p class="sub reveal">I learn how AI works in class — and ship it as real products outside it.</p>
+      </div>
+      <ul class="facts reveal" aria-label="Quick facts">
+        <li style="--c:var(--sky)"><span class="facts__i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c2 2 10 2 12 0v-5"/><path d="M22 9v6"/></svg></span><b>BTech AI/ML</b><small>3rd year · Maharana Institute of Professional Studies</small></li>
+        <li style="--c:var(--coral)"><span class="facts__i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15c-1.5 1.5-2 4.5-2 6 1.5 0 4.5-.5 6-2"/><path d="M9 15l-3-3c2-6 7-9 14-9 0 7-3 12-9 14z"/><circle cx="15" cy="9" r="1.8"/></svg></span><b>Founder</b><small>Vaslix · AI agency</small></li>
+        <li style="--c:var(--gold)"><span class="facts__i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span><b>Creator</b><small>TEKNOA · AI news</small></li>
+        <li style="--c:var(--mint)"><span class="facts__i"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></span><b>India 🇮🇳</b><small>English · Hindi</small></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="superpowers" class="section section--soft" aria-labelledby="skills-title">
+    <div class="wrap">
+      <div class="head">
+        <p class="label"><span class="ftab">superpowers.ts</span> 02 — Skills / tech superpowers</p>
+        <h2 id="skills-title" class="reveal">Six <em>superpowers.</em></h2>
+      </div>
+      <ul class="skills">
+        <li class="skill reveal" style="--c:var(--coral)"><span class="skill__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3a3 3 0 0 0-3 3v.2A3 3 0 0 0 4 9a3 3 0 0 0 .8 2A3 3 0 0 0 4 13a3 3 0 0 0 2 2.8V16a3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3zM15 3a3 3 0 0 1 3 3v.2A3 3 0 0 1 20 9a3 3 0 0 1-.8 2 3 3 0 0 1 .8 2 3 3 0 0 1-2 2.8V16a3 3 0 0 1-3 3 3 3 0 0 1-3-3"/></svg></span><div><h3>Machine learning</h3><ul class="tags"><li>Python</li><li>pandas</li><li>scikit-learn</li></ul></div></li>
+        <li class="skill reveal" style="--c:var(--gold)"><span class="skill__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01M9.5 16.2h5"/><circle cx="12" cy="3.5" r="1"/></svg></span><div><h3>AI chat &amp; voice agents</h3><ul class="tags"><li>LLM agents</li><li>WhatsApp</li><li>LiveKit</li></ul></div></li>
+        <li class="skill reveal" style="--c:var(--sky)"><span class="skill__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 8.5h18M9.5 12.5 7.5 14.5l2 2M14.5 12.5l2 2-2 2"/></svg></span><div><h3>Full-stack products</h3><ul class="tags"><li>Next.js</li><li>TypeScript</li><li>Laravel</li></ul></div></li>
+        <li class="skill reveal" style="--c:var(--lilac)"><span class="skill__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="6" height="6" rx="1.5"/><rect x="15" y="15" width="6" height="6" rx="1.5"/><rect x="15" y="3" width="6" height="6" rx="1.5"/><path d="M9 6h6M18 9v6M6 9v6a3 3 0 0 0 3 3h6"/></svg></span><div><h3>Automation &amp; growth</h3><ul class="tags"><li>Node.js</li><li>Playwright</li><li>DM funnels</li></ul></div></li>
+        <li class="skill reveal" style="--c:var(--mint)"><span class="skill__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h2M7 8v8M11 5v14M15 9v6M19 7v10M21 12h0"/></svg></span><div><h3>AI content &amp; voice cloning</h3><ul class="tags"><li>Voice clone</li><li>Scripts</li><li>Motion reels</li></ul></div></li>
+        <li class="skill reveal" style="--c:var(--lime)"><span class="skill__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18h10a4 4 0 0 0 .6-8A6 6 0 0 0 6.2 9.3 4.4 4.4 0 0 0 7 18z"/><path d="m10 14 2-2 2 2M12 12v5"/></svg></span><div><h3>Cloud on AWS</h3><ul class="tags"><li>Amplify</li><li>CI/CD</li><li>CloudFront</li></ul></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="work" class="section" aria-labelledby="work-title">
+    <div class="wrap">
+      <div class="head">
+        <p class="label"><span class="ftab">work.json</span> 03 — Projects &amp; achievements</p>
+        <h2 id="work-title" class="reveal">Products I’ve <em>shipped.</em></h2>
+        <p class="sub reveal">Built at Vaslix. All live — tap to try.</p>
+      </div>
+      <p class="swipe" aria-hidden="true">swipe <span>→</span></p>
+      <ul class="projs" aria-label="Nine live projects" tabindex="0">
+        <li class="proj reveal" style="--c:var(--coral)">
+          <a class="proj__link" href="https://www.launchos.co.in/" target="_blank" rel="noopener">
+            <span class="proj__shot"><span class="proj__bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="assets/work/launchos.webp" width="1200" height="750" loading="lazy" alt=""></span>
+            <span class="proj__body">
+              <span class="proj__n" aria-hidden="true">01</span>
+              <span class="proj__t">launchOS</span>
+              <span class="proj__d">One line in, a full startup launch plan out.</span>
+              <span class="proj__foot"><span class="tags"><span>AI SaaS</span><span>Next.js</span></span><span class="proj__go">Visit <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><span class="sr-only"> launchOS (opens in a new tab)</span></span></span>
+            </span>
+          </a>
+        </li>
+        <li class="proj reveal" style="--c:var(--gold)">
+          <a class="proj__link" href="https://pool.softwarehub.tech/market" target="_blank" rel="noopener">
+            <span class="proj__shot"><span class="proj__bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="assets/work/softwarehub.webp" width="1200" height="750" loading="lazy" alt=""></span>
+            <span class="proj__body">
+              <span class="proj__n" aria-hidden="true">02</span>
+              <span class="proj__t">Software Hub</span>
+              <span class="proj__d">Marketplace for software keys, with escrow.</span>
+              <span class="proj__foot"><span class="tags"><span>Marketplace</span><span>Escrow</span></span><span class="proj__go">Visit <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><span class="sr-only"> Software Hub (opens in a new tab)</span></span></span>
+            </span>
+          </a>
+        </li>
+        <li class="proj reveal" style="--c:var(--lilac)">
+          <a class="proj__link" href="https://www.aandreamelie.com/" target="_blank" rel="noopener">
+            <span class="proj__shot"><span class="proj__bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="assets/work/aandre.webp" width="1200" height="750" loading="lazy" alt=""></span>
+            <span class="proj__body">
+              <span class="proj__n" aria-hidden="true">03</span>
+              <span class="proj__t">Aandré Amelie</span>
+              <span class="proj__d">Custom D2C fashion storefront.</span>
+              <span class="proj__foot"><span class="tags"><span>E-commerce</span><span>Next.js</span></span><span class="proj__go">Visit <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><span class="sr-only"> Aandré Amelie (opens in a new tab)</span></span></span>
+            </span>
+          </a>
+        </li>
+        <li class="proj reveal" style="--c:var(--mint)">
+          <a class="proj__link" href="https://kusho.vercel.app/" target="_blank" rel="noopener">
+            <span class="proj__shot"><span class="proj__bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="assets/work/kusho.webp" width="1200" height="750" loading="lazy" alt=""></span>
+            <span class="proj__body">
+              <span class="proj__n" aria-hidden="true">04</span>
+              <span class="proj__t">Kusho</span>
+              <span class="proj__d">Premium Shopify storefront.</span>
+              <span class="proj__foot"><span class="tags"><span>Shopify</span><span>D2C</span></span><span class="proj__go">Visit <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><span class="sr-only"> Kusho (opens in a new tab)</span></span></span>
+            </span>
+          </a>
+        </li>
+        <li class="proj reveal" style="--c:var(--sky)">
+          <a class="proj__link" href="https://www.aarcbookkeeping.com/" target="_blank" rel="noopener">
+            <span class="proj__shot"><span class="proj__bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="assets/work/aarc.webp" width="1200" height="750" loading="lazy" alt=""></span>
+            <span class="proj__body">
+              <span class="proj__n" aria-hidden="true">05</span>
+              <span class="proj__t">AARC Bookkeeping</span>
+              <span class="proj__d">Lead-generation site for a finance firm.</span>
+              <span class="proj__foot"><span class="tags"><span>Lead gen</span><span>Finance</span></span><span class="proj__go">Visit <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><span class="sr-only"> AARC Bookkeeping (opens in a new tab)</span></span></span>
+            </span>
+          </a>
+        </li>
+        <li class="proj reveal" style="--c:var(--lime)">
+          <a class="proj__link" href="https://phenomenal-cascaron-982e78.netlify.app/" target="_blank" rel="noopener">
+            <span class="proj__shot"><span class="proj__bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="assets/work/aether.webp" width="1200" height="750" loading="lazy" alt=""></span>
+            <span class="proj__body">
+              <span class="proj__n" aria-hidden="true">06</span>
+              <span class="proj__t">Aether Dental</span>
+              <span class="proj__d">Clinic site with an AI bot that books visits.</span>
+              <span class="proj__foot"><span class="tags"><span>Healthcare</span><span>AI bot</span></span><span class="proj__go">Visit <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><span class="sr-only"> Aether Dental (opens in a new tab)</span></span></span>
+            </span>
+          </a>
+        </li>
+        <li class="proj reveal" style="--c:var(--peach)">
+          <a class="proj__link" href="https://inquiryboost.vercel.app/" target="_blank" rel="noopener">
+            <span class="proj__shot"><span class="proj__bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="assets/work/inquiryboost.webp" width="1200" height="750" loading="lazy" alt=""></span>
+            <span class="proj__body">
+              <span class="proj__n" aria-hidden="true">07</span>
+              <span class="proj__t">InquiryBoost</span>
+              <span class="proj__d">WhatsApp admission automation for schools.</span>
+              <span class="proj__foot"><span class="tags"><span>WhatsApp</span><span>Automation</span></span><span class="proj__go">Visit <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><span class="sr-only"> InquiryBoost (opens in a new tab)</span></span></span>
+            </span>
+          </a>
+        </li>
+        <li class="proj reveal" style="--c:var(--gold)">
+          <a class="proj__link" href="https://laptophouse-knp.vercel.app/" target="_blank" rel="noopener">
+            <span class="proj__shot"><span class="proj__bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="assets/work/laptophouse.webp" width="1200" height="750" loading="lazy" alt=""></span>
+            <span class="proj__body">
+              <span class="proj__n" aria-hidden="true">08</span>
+              <span class="proj__t">Laptop House</span>
+              <span class="proj__d">Bilingual English/Hindi store for a laptop shop.</span>
+              <span class="proj__foot"><span class="tags"><span>Retail</span><span>Bilingual</span></span><span class="proj__go">Visit <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><span class="sr-only"> Laptop House (opens in a new tab)</span></span></span>
+            </span>
+          </a>
+        </li>
+        <li class="proj reveal" style="--c:var(--coral)">
+          <a class="proj__link" href="https://stately-seahorse-c66817.netlify.app/" target="_blank" rel="noopener">
+            <span class="proj__shot"><span class="proj__bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="assets/work/pagani.webp" width="1200" height="750" loading="lazy" alt=""></span>
+            <span class="proj__body">
+              <span class="proj__n" aria-hidden="true">09</span>
+              <span class="proj__t">Pagani Experience</span>
+              <span class="proj__d">Cinematic 3D scroll story.</span>
+              <span class="proj__foot"><span class="tags"><span>Concept</span><span>3D web</span></span><span class="proj__go">Visit <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><span class="sr-only"> Pagani Experience (opens in a new tab)</span></span></span>
+            </span>
+          </a>
+        </li>
+      </ul>
+
+      <h3 class="sub-h reveal">Achievements</h3>
+      <ul class="wins reveal">
+        <li style="--c:var(--coral)"><b>9+</b><span>live products</span></li>
+        <li style="--c:var(--gold)"><b>7</b><span>industries</span></li>
+        <li style="--c:var(--sky)"><b>24/7</b><span>AI agents</span></li>
+        <li style="--c:var(--mint)"><b>1st</b><span>AWS deploy</span></li>
+      </ul>
+
+      <h3 class="sub-h reveal">Beyond client work</h3>
+      <ul class="extras">
+        <li class="extra extra--teknoa reveal">
+          <img src="assets/teknoa-logo.webp" width="64" height="64" alt="TEKNOA logo">
+          <h4>TEKNOA</h4>
+          <p>AI news in 50 seconds — in my cloned voice.</p>
+          <ol class="pipe" aria-label="How a TEKNOA reel is made">
+            <li><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></span>Research</li><li><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h2M7 8v8M11 5v14M15 8v8M19 11v2"/></svg></span>Voice</li><li><span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M10 9l5 3-5 3z"/></svg></span>Reel</li><li><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3 3 10l7 3 3 7z"/><path d="M10 13l4-4"/></svg></span>DM</li>
+          </ol>
+          <div class="row"><a class="btn btn--orange btn--sm" href="https://www.instagram.com/tek_noa/" target="_blank" rel="noopener">Instagram <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><a class="btn btn--light btn--sm" href="https://www.youtube.com/@tek_noa" target="_blank" rel="noopener">YouTube <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+        </li>
+        <li class="extra reveal" style="--c:var(--peach)">
+          <span class="extra__i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg></span>
+          <h4>GharLeads</h4>
+          <p>Lead tool for brokers — product + Hindi tutorials.</p>
+          <div class="row"><a class="btn btn--light btn--sm" href="https://gharleads.in" target="_blank" rel="noopener">gharleads.in <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+        </li>
+        <li class="extra reveal" style="--c:var(--lime)">
+          <span class="extra__i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg></span>
+          <h4>tasmiya.ai</h4>
+          <p>My AI twin — a tiny model that trains in your browser.</p>
+          <div class="row"><button class="btn btn--dark btn--sm" type="button" data-open-twin aria-controls="twin" aria-expanded="false">Try it <span class="mono" aria-hidden="true">&gt;_</span></button></div>
+        </li>
+      </ul>
+
+      <div class="gh-box reveal" id="github">
+        <div class="gh-box__head">
+          <h3 class="gh-box__t"><svg class="gh" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> From my GitHub</h3>
+          <a class="btn btn--light btn--sm" href="https://github.com/tamia02" target="_blank" rel="noopener">tamia02 <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        </div>
+        <div class="langs" aria-label="Languages across my 34 public repositories: mostly TypeScript, then HTML, JavaScript, PHP and Python">
+          <div class="langs__bar" aria-hidden="true"><i style="width:41.2%;background:#3178C6"></i><i style="width:17.6%;background:#E34C26"></i><i style="width:11.8%;background:#F1E05A"></i><i style="width:8.8%;background:#4F5D95"></i><i style="width:8.8%;background:#3572A5"></i><i style="width:11.8%;background:#B8B4C8"></i></div>
+          <p class="langs__t"><span class="mono">34</span> public repos · mostly TypeScript</p>
+        </div>
+        <ul class="repos"><li><a class="repo" href="https://github.com/tamia02/VOICEBOT" target="_blank" rel="noopener"><b>VOICEBOT</b><span>AI phone agent</span><span class="repo__lang"><i style="background:#3572A5"></i>Python</span></a></li><li><a class="repo" href="https://github.com/tamia02/autoposter" target="_blank" rel="noopener"><b>autoposter</b><span>AI content pipeline</span><span class="repo__lang"><i style="background:#3572A5"></i>Python</span></a></li><li><a class="repo" href="https://github.com/tamia02/whatsappautomation" target="_blank" rel="noopener"><b>whatsappautomation</b><span>WhatsApp growth agent</span><span class="repo__lang"><i style="background:#3178C6"></i>TypeScript</span></a></li><li><a class="repo" href="https://github.com/tamia02/tan90erp" target="_blank" rel="noopener"><b>tan90erp</b><span>ERP on Laravel</span><span class="repo__lang"><i style="background:#4F5D95"></i>PHP</span></a></li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="aws" class="section section--ink" aria-labelledby="aws-title">
+    <div class="wrap">
+      <div class="head">
+        <p class="label label--light"><span class="ftab ftab--dark">amplify.yml</span> 04 — How this site runs</p>
+        <h2 id="aws-title" class="reveal">Live on <em>AWS.</em></h2>
+        <p class="sub reveal">Push to GitHub → live worldwide. No servers, no keys.</p>
+      </div>
+      <ol class="flow reveal" aria-label="Deployment flow">
+        <li style="--c:var(--lilac)"><span class="flow__i"><svg class="gh" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></span><b>GitHub</b><small>code</small></li>
+        <li style="--c:var(--gold)"><span class="flow__i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span><b>Amplify</b><small>build + deploy</small></li>
+        <li style="--c:var(--sky)"><span class="flow__i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18h10a4 4 0 0 0 .5-8 6 6 0 0 0-11.5 1.5A3.5 3.5 0 0 0 7 18z"/></svg></span><b>CloudFront</b><small>HTTPS · CDN</small></li>
+        <li style="--c:var(--lime)"><span class="flow__i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></svg></span><b>Your browser</b><small>AI twin runs here</small></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section contact" aria-labelledby="contact-title">
+    <div class="wrap contact__in">
+      <p class="label"><span class="ftab">contact.sh</span> 05 — Contact</p>
+      <h2 id="contact-title" class="reveal">Have an idea? <em>Let’s build it.</em></h2>
+      <div class="contact__links reveal">
+        <a class="btn btn--dark" href="mailto:hello@vaslix.com">hello@vaslix.com</a>
+        <a class="btn btn--light" href="https://github.com/tamia02" target="_blank" rel="noopener"><svg class="gh" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> GitHub</a>
+        <a class="btn btn--light" href="https://www.linkedin.com/company/vaslix" target="_blank" rel="noopener">LinkedIn <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <a class="btn btn--light" href="https://vaslix.com" target="_blank" rel="noopener">vaslix.com <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__in">
+    <p class="mono-line"><span class="prompt-sign">$</span> © <span id="year">2026</span> Tasmiya Siddiqui · built by me · hosted on AWS Amplify</p>
+    <p class="small hint">psst — my AI twin has one hidden command. It needs admin rights 😉</p>
+  </div>
+</footer>
+
+<!-- The visible hint for the interactive feature -->
+<button class="psst" type="button" data-open-twin aria-controls="twin" aria-expanded="false">
+  <span class="psst__bubble"><span class="psst__glow" aria-hidden="true"></span><span class="psst__txt">psst — talk to my AI twin</span> <span aria-hidden="true">⌨️</span></span><svg class="bot" viewBox="0 0 16 19" shape-rendering="crispEdges" aria-hidden="true"><rect class="blip" x="7" y="0" width="2" height="2" fill="#F4CE6F"/><rect x="7.5" y="2" width="1" height="2" fill="#172631"/><rect x="2" y="4" width="12" height="9" fill="#172631"/><rect x="3" y="5" width="10" height="7" fill="#8ED6BE"/><g class="eyes"><rect x="5" y="7" width="2" height="2" fill="#172631"/><rect x="9" y="7" width="2" height="2" fill="#172631"/></g><rect x="6" y="10" width="4" height="1" fill="#172631"/><rect x="1" y="7" width="1" height="3" fill="#172631"/><rect x="14" y="7" width="1" height="3" fill="#172631"/><rect x="4" y="13" width="8" height="5" fill="#172631"/><rect x="5" y="14" width="6" height="3" fill="#2C9AA6"/><rect x="7" y="15" width="2" height="1" fill="#F4CE6F"/><rect x="2" y="14" width="2" height="3" fill="#172631"/><rect x="12" y="14" width="2" height="3" fill="#172631"/></svg>
+</button>
+
+<!-- AI twin panel (non-modal: the page stays usable behind it) -->
+<aside id="twin" class="twin" role="dialog" aria-modal="false" aria-labelledby="twin-title" hidden>
+  <div class="twin__bar"><i></i><i></i><i></i><span>twin.exe — tasmiya_os</span></div>
+  <div class="twin__head">
+    <div class="twin__id">
+      <span class="avatar" aria-hidden="true">T<i></i></span>
+      <div>
+        <h2 id="twin-title">tasmiya.ai <small>· my AI twin</small></h2>
+        <p class="twin__status"><span class="live" aria-hidden="true"></span> <span id="model-status">training in your browser…</span></p>
+      </div>
+    </div>
+    <div class="twin__actions">
+      <button class="icon-btn" type="button" id="voice-btn" aria-label="Play my AI voice clone saying hi" title="Hear my AI voice clone">🔊</button>
+      <button class="icon-btn" type="button" id="twin-close" aria-label="Close the AI twin">✕</button>
+    </div>
+  </div>
+  <div class="twin__log" id="log" role="log" aria-live="polite" aria-relevant="additions" tabindex="0" aria-label="Conversation with the AI twin"></div>
+  <div class="twin__chips" id="chips" aria-label="Suggested questions"></div>
+  <form class="twin__form" id="twin-form" autocomplete="off">
+    <label for="twin-input" class="sr-only">Ask my AI twin something</label>
+    <span class="prompt" aria-hidden="true">&gt;</span>
+    <input id="twin-input" name="q" type="text" maxlength="160" placeholder="ask me anything… or type help" enterkeyhint="send" autocapitalize="off" spellcheck="false">
+    <button class="btn btn--violet btn--sm" type="submit">Send</button>
+  </form>
+  <audio id="voice" preload="none" src="assets/ai-twin-hello.mp3"></audio>
+</aside>
+
+<!-- Reel mode overlay -->
+<div class="reel" id="reel" role="dialog" aria-modal="true" aria-labelledby="reel-title" hidden>
+  <div class="reel__frame">
+    <div class="reel__bar" aria-hidden="true"><i id="reel-progress"></i></div>
+    <p class="reel__pill" id="reel-title">AI twin · reel mode</p>
+    <p class="reel__hook" id="reel-hook"></p>
+    <div class="reel__wave" aria-hidden="true"><i style="animation-delay:-0.00s"></i><i style="animation-delay:-0.14s"></i><i style="animation-delay:-0.27s"></i><i style="animation-delay:-0.41s"></i><i style="animation-delay:-0.55s"></i><i style="animation-delay:-0.69s"></i><i style="animation-delay:-0.82s"></i><i style="animation-delay:-0.96s"></i><i style="animation-delay:-0.10s"></i><i style="animation-delay:-0.23s"></i><i style="animation-delay:-0.37s"></i><i style="animation-delay:-0.51s"></i><i style="animation-delay:-0.64s"></i><i style="animation-delay:-0.78s"></i><i style="animation-delay:-0.92s"></i><i style="animation-delay:-0.06s"></i><i style="animation-delay:-0.19s"></i><i style="animation-delay:-0.33s"></i></div>
+    <p class="reel__caption" id="reel-caption" aria-hidden="true"></p>
+    <div class="reel__end">
+      <span class="reel__logo" aria-hidden="true">T</span>
+      <p>That was a reel made by an AI twin.</p>
+      <p class="small">Real ones: <b>@tek_noa</b> on Instagram</p>
+    </div>
+    <p class="sr-only" id="reel-full"></p>
+  </div>
+  <div class="reel__controls">
+    <button class="btn btn--light btn--sm" type="button" id="reel-replay">↺ Replay</button>
+    <button class="btn btn--violet btn--sm" type="button" id="reel-close">Close</button>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="twin-data.js" defer></script>
+<script src="classic.js" defer></script>
+</body>
+</html>

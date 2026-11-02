@@ -1,0 +1,15 @@
+version: 1
+frontend:
+  phases:
+    build:
+      commands:
+        - node --version
+        # The site is static (no framework). These checks run on every deploy:
+        # required sections, the feature hint, local files, the AI twin's accuracy, the window manager, the City and the chat cards.
+        - node --test test/site.test.mjs test/os.test.mjs
+  artifacts:
+    baseDirectory: site
+    files:
+      - '**/*'
+  cache:
+    paths: []
