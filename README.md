@@ -2,7 +2,7 @@
 
 > **Build Your Tech Superpower** · my portfolio is a tiny computer. Open apps for About, Skills and Projects, walk a pixel city where every building is something I built, and chat with **my AI twin** — a small machine-learning model that trains in your browser. Static site on **AWS Amplify Hosting**.
 
-**Live site:** `https://<your-amplify-domain>` ← *add after deploying* · **Classic view:** `/classic.html` (plain scrollable page)
+**Live site:** https://main.d2egtwnseg491f.amplifyapp.com · **Classic view:** `/classic.html` (plain scrollable page)
 
 ![Desktop screenshot](docs/desktop.png)
 
